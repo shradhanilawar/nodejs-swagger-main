@@ -45,7 +45,7 @@ app.get('/api/users/:id', (req, res) => {
 // POST a new user
 app.post('/api/users', (req, res) => {
   const user = {
-    id: users.length + 1,
+    id: req.body.id,
     name: req.body.name,
   };
   users.push(user);
